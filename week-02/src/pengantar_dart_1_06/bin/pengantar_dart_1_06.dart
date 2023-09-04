@@ -1,5 +1,5 @@
-import 'package:pengantar_dart_1_06/pengantar_dart_1_06.dart' as pengantar_dart_1_06;
-
-void main(List<String> arguments) {
-  print('Hello world: ${pengantar_dart_1_06.calculate()}!');
+void main() {
+  for (int i = 0; i < 10; i++) {
+    print('Nama saya adalah Bima, Sekarang berumur ${18-i} tahun');
+  }
 }

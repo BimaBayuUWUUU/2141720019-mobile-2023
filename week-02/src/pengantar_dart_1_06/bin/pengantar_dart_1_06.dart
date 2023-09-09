@@ -1,5 +1,5 @@
 void main() {
-  for (int i = 0; i < 10; i++) {
-    print('Nama saya adalah Bima, Sekarang berumur ${18-i} tahun');
+  for (int i = 18; i > 8; i--) {
+    print('Nama saya adalah Bima, Sekarang berumur $i tahun');
   }
 }

@@ -57,3 +57,8 @@
 >![image](docs/img/L3P3.png)
 >> Program error karena  steatment operasi yang digunakan adalah `or` harusnya `and`. Perbaikanya dibawah ini.
 >![image](docs/img/L4P3.png)
+
+## **Tugas**
+### *Buatlah sebuah program yang dapat menampilkan bilangan prima dari angka 0 sampai 201 menggunakan Dart. Ketika bilangan prima ditemukan, maka tampilkan nama lengkap dan NIM Anda.*
+>![image](docs/img/tugas.png)
+>![image](docs/img/tugas1.png)

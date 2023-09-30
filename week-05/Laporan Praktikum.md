@@ -51,4 +51,4 @@
 
 ## Tugas 3
 
-Hasil praktikum :
+Hasil praktikum : [First Flutter app](https://github.com/BimaBayuUWUUU/2141720019-mobile-2023/tree/master/bimbay_app_week5/my_awesome_namer)

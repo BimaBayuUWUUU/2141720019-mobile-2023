@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/week-04/src/pengantar_dart_4/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/week-04/src/pengantar_dart_4/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/week-04/src/pengantar_dart_4/build" />
+      <excludeFolder url="file://$MODULE_DIR$/week-03/src/pengantar_dart_3/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/week-03/src/pengantar_dart_3/build" />
+      <excludeFolder url="file://$MODULE_DIR$/week-03/src/pengantar_dart_3/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/week-05/src/hello_world/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/week-05/src/hello_world/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/week-05/src/hello_world/build" />
+      <excludeFolder url="file://$MODULE_DIR$/week-01/src/hello_word_2141720119/build" />
+      <excludeFolder url="file://$MODULE_DIR$/week-01/src/hello_word_2141720119/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/week-01/src/hello_word_2141720119/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/week-02/src/pengantar_dart_1_06/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/week-02/src/pengantar_dart_1_06/build" />
+      <excludeFolder url="file://$MODULE_DIR$/week-02/src/pengantar_dart_1_06/.dart_tool" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Dart SDK" level="project" />
+    <orderEntry type="library" name="Dart Packages" level="project" />
+  </component>
+</module>

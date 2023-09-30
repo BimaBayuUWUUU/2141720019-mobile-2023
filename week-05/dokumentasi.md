@@ -11,44 +11,55 @@
 ### Praktikum 1
 
 - Menjalankan command untuk scaffolding project flutter
-  ![Alt text](docs/img/P1L1.png)
+  ![Alt text](image.png)
   ***
-  ![Alt text](docs/img/P1L1-1.png)
-  ***
-  ![Alt text](docs/img/P1L2.png)
-
+  ![Alt text](image-1.png)
 - Project flutter telah berhasil dibuat
-  ![Alt text](docs/img/P1L4.png)
+  ![Alt text](image-2.png)
 
 ### Praktikum 2
 
-- Menyiapkan repository github![Alt text](docs/img/P2L1.png)
-- Mengubah title aplikasi menjadi nama dan nim![Alt text](docs/img/P2L4.png)
+- Menyiapkan repository github![Alt text](image-3.png)
+- Melakukan commit dan push![Alt text](image-4.png)
+- Menjalankan project hello_world![Alt text](image-5.png)
+- Mengubah title aplikasi menjadi nama dan nim![Alt text](image-6.png)
 
 ### Praktikum 3
 
 - **Text Widget**
-  - Membuat stateless text_widget ![Alt text](docs/img/P3L1.png)
-  - Menambahkan widget text_widget pada main ![Alt text](docs/img/P3L1-1.png)
+  - Membuat stateless text_widget ![Alt text](image-8.png)
+  - Menambahkan widget text_widget pada main ![Alt text](image-9.png)
+  - Hasil eksekusi ![Alt text](image-7.png)
 - **Image Widget**
-  - Membuat stateless image_widget ![Alt text](docs/img/P3L2.png)
-  - Menambahkan widget image_widget pada main ![Alt text](docs/img/P3L2-1.png)
+  - Membuat stateless image_widget ![Alt text](image-13.png)
+  - Menambahkan widget image_widget pada main ![Alt text](image-11.png)
+  - Hasil eksekusi ![Alt text](image-12.png)
 
 ### Praktikum 4
 
 - **Cupertino Button dan Loading Bar**
-![Alt text](docs/img/P4L1.png)
+  - Kode
+    - loading_cupertino.dart![Alt text](image-10.png)
+    - main.dart ![Alt text](image-14.png)
+  - Hasil ![Alt text](image-15.png)
 - **Floating Action Button (FAB)**
-![Alt text](docs/img/P4L2.png)
+  - Kode
+    - fab_widget.dart ![Alt text](image-17.png)
+    - main.dart![Alt text](image-16.png)
+  - Hasil ![Alt text](image-18.png)
 - **Scaffold Widget**
-![Alt text](docs/img/P4L3.png)
+  - Kode ![Alt text](image-20.png)
+  - Hasil ![Alt text](image-19.png)
 - **Dialog Widget**
-![Alt text](docs/img/P4L4.png)
+  - Kode ![Alt text](image-22.png)
+  - Hasil ![Alt text](image-21.png)
 - **Input dan Selection Widget**
-![Alt text](docs/img/P4L5.png)
+  - Kode ![Alt text](image-24.png)
+  - Hasil ![Alt text](image-23.png)
 - **Date and Time Pickers**
-![Alt text](docs/img/P4L6.png)
+  - Kode ![Alt text](image-26.png)
+  - Hasil ![Alt text](image-25.png)
 
 ## Tugas 3
 
-Hasil praktikum :
+Hasil praktikum -> [Aplikasi hasil praktikum](https://github.com/AdamPoi/my_awesome_namer)

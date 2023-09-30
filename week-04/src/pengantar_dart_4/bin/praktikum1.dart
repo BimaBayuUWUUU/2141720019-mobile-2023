@@ -11,19 +11,18 @@
 // }
 
 void main() {
-  var list = List.filled(5, null);
+  var list = List.filled(5, null as dynamic); // Use dynamic type
   list[1] = "Bima Bayu Saputra";
   list[2] = "2141720019";
 
-  assert(list.length == 5); // Panjang List sekarang adalah 5.
-  assert(list[1] == "Bima Bayu Saputra"); // Elemen indeks 1 adalah nama Anda.
-  assert(list[2] == "2141720019"); // Elemen indeks 2 adalah NIM Anda.
+  assert(list.length == 5);
+  assert(list[1] == "Bima Bayu Saputra");
+  assert(list[2] == "2141720019");
 
   print("Panjang List: ${list.length}");
   print("Elemen indeks 1: ${list[1]}");
   print("Elemen indeks 2: ${list[2]}");
 }
-
 
 
 

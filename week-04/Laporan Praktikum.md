@@ -19,6 +19,7 @@ Kode ini menghasilkan output pertama adalah panjang list, kemudian nilai indeks 
 ![image](docs/img/L3P1.png)
 
 ### Langkah 4
+![image](docs/img/L4P1.png)
 
 ## Praktikum_2
 

@@ -51,4 +51,12 @@
 
 ## Tugas 3
 
+- **Tampilan Awal**
+  ![Alt text](docs/img/my_apss.png)
+- **Like**
+  ![Alt text](docs/img/my_apss1.png)
+- **Next**
+  ![Alt text](docs/img/my_apss2.png)
+- **Show Like**
+  ![Alt text](docs/img/my_apss3.png)
 Hasil praktikum : [First Flutter app](https://github.com/BimaBayuUWUUU/2141720019-mobile-2023/tree/master/bimbay_app_week5/my_awesome_namer)

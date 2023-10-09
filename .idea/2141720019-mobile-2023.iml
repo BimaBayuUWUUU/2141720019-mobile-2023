@@ -18,6 +18,9 @@
       <excludeFolder url="file://$MODULE_DIR$/week-02/src/pengantar_dart_1_06/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/week-02/src/pengantar_dart_1_06/build" />
       <excludeFolder url="file://$MODULE_DIR$/week-02/src/pengantar_dart_1_06/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/bimbay_app_week5/my_awesome_namer/build" />
+      <excludeFolder url="file://$MODULE_DIR$/bimbay_app_week5/my_awesome_namer/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/bimbay_app_week5/my_awesome_namer/.pub" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

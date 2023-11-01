@@ -1,9 +1,10 @@
-import 'package:belanja/models/item.dart';
 import 'package:flutter/material.dart';
+import 'package:belanja/models/item.dart';
+import '../widget/home/home app_bar.dart';
+import '../widget/home/home_bottom_bar.dart';
+import '../widget/home/product_gird.dart';
 
 class HomePage extends StatelessWidget {
-  HomePage({super.key});
-
   final List<Item> items = [
     Item(
       name: 'Gula Palu Merah',
@@ -17,7 +18,35 @@ class HomePage extends StatelessWidget {
       price: 2000,
       imageUrl: 'assets/img/garam.png',
       stock: 30,
-      rating: 4.0,
+      rating: 5.0,
+    ),
+    Item(
+      name: 'Kental Manis Asyique',
+      price: 15000,
+      imageUrl: 'assets/img/ktl.png',
+      stock: 50,
+      rating: 4.5,
+    ),
+    Item(
+      name: 'Teh Tubruk Banteng',
+      price: 10000,
+      imageUrl: 'assets/img/teh.png',
+      stock: 20,
+      rating: 3.5,
+    ),
+    Item(
+      name: 'Saos Lahar Merah',
+      price: 3000,
+      imageUrl: 'assets/img/saos.png',
+      stock: 70,
+      rating: 4.8,
+    ),
+    Item(
+      name: 'Kecap Bunda Malika',
+      price: 5000,
+      imageUrl: 'assets/img/kecap.png',
+      stock: 100,
+      rating: 4.9,
     ),
   ];
   final routeName = '/item';
@@ -25,95 +54,12 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.green,
-        title: const Text('Toko Flutter'),
-      ),
+      appBar: HomeAppBar(),
       body: Container(
         margin: const EdgeInsets.all(15),
-        child: GridView.builder(
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2,
-            childAspectRatio: 0.7,
-          ),
-          itemCount: items.length,
-          itemBuilder: (context, index) {
-            final item = items[index];
-            return Material(
-              child: InkWell(
-                onTap: () {
-                  Navigator.pushNamed(context, routeName, arguments: item);
-                },
-                child: Card(
-                  elevation: 5,
-                  margin: EdgeInsets.all(10),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Hero(
-                        tag: item.name,
-                        child: Image.asset(
-                          item.imageUrl,
-                          width: 150,
-                          height: 150,
-                        ),
-                      ),
-                      const SizedBox(height: 10), // Spasi antara gambar dan nama produk
-                      Text(
-                        item.name.toString(),
-                        style: const TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      SizedBox(height: 5), // Spasi antara nama produk dan stok
-                      Text(
-                        'Stok: ${item.stock.toString()}',
-                        style: const TextStyle(
-                          color: Colors.green, // Warna teks hijau untuk menunjukkan ketersediaan
-                        ),
-                      ),
-                      const SizedBox(height: 5), // Spasi antara stok dan rating
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const Icon(
-                            Icons.star,
-                            color: Colors.yellow,
-                          ),
-                          Text(
-                            ' ${item.rating.toString()}',
-                            style: const TextStyle(
-                              fontSize: 16,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            );
-          },
-        ),
+        child: ProductGrid(items: items, routeName: routeName),
       ),
-      bottomNavigationBar: BottomAppBar(
-        child: Container(
-          height: 50,
-          color: Colors.green,
-          alignment: Alignment.center,
-          child: const Text(
-            'Bima Bayu Saputra || 2141720019',
-            style: TextStyle(
-              fontSize: 20,
-              color: Colors.white,
-            ),
-          ),
-        ),
-      )
+      bottomNavigationBar: const HomeBottomBar(),
     );
   }
 }

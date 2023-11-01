@@ -24,6 +24,9 @@
       <excludeFolder url="file://$MODULE_DIR$/week-08/src/belanja/build" />
       <excludeFolder url="file://$MODULE_DIR$/week-08/src/belanja/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/week-08/src/belanja/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/week-07/src/layout_flutter/build" />
+      <excludeFolder url="file://$MODULE_DIR$/week-07/src/layout_flutter/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/week-07/src/layout_flutter/.dart_tool" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

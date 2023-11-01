@@ -27,6 +27,9 @@
       <excludeFolder url="file://$MODULE_DIR$/week-07/src/layout_flutter/build" />
       <excludeFolder url="file://$MODULE_DIR$/week-07/src/layout_flutter/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/week-07/src/layout_flutter/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/week-10/src/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/week-10/src/build" />
+      <excludeFolder url="file://$MODULE_DIR$/week-10/src/.pub" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

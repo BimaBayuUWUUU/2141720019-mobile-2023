@@ -13,6 +13,30 @@
 
 ## Jawaban
 
+### Maksud Langkah 4:
+
+Pada Langkah 4, dibuat file `data_layer.dart` yang berisi pernyataan `export` untuk dua model, yaitu `plan.dart` dan `task.dart`. Tujuan dari langkah ini adalah untuk membungkus beberapa lapisan data ke dalam satu file agar nantinya proses impor di berbagai bagian aplikasi menjadi lebih ringkas dan mudah diatur. Dengan demikian, pengelolaan import dalam proyek dapat lebih terstruktur dan efisien.
+
+### Perlu Variabel `plan` di Langkah 6:
+
+Pada Langkah 6, variabel `plan` dibuat sebagai bagian dari state dalam class `_PlanScreenState`. Ini dilakukan untuk menyimpan dan mengelola rencana (`plan`) yang akan ditampilkan dalam aplikasi. Variabel ini perlu untuk dapat diubah (mutable) karena akan mengalami perubahan saat pengguna menambahkan tugas baru atau mengubah status tugas yang ada. Oleh karena itu, tidak dimungkinkan untuk membuatnya sebagai konstanta.
+
+Sebaliknya, konstanta pada Dart bersifat tetap dan tidak dapat diubah setelah dideklarasikan. Konstanta biasanya digunakan untuk nilai yang tetap dan tidak berubah sepanjang program berjalan.
+
+### Hasil Langkah 9:
+
+Aplikasi Flutter sederhana yang dapat menampilkan daftar rencana dan tugas-tugas yang dapat diedit.
+
+### Kegunaan Method pada Langkah 11 dan 13 dalam Lifecycle State:
+
+#### Langkah 11 (Scroll Listener):
+
+Pada Langkah 11, dengan menambahkan listener pada `ScrollController`, setiap kali terjadi perubahan pada posisi scroll, method `addListener` akan dipanggil. Dalam kasus ini, ketika pengguna melakukan scroll, method ini mengarahkan fokus ke elemen yang bukan merupakan elemen input (`TextField`) untuk menyembunyikan keyboard. Ini membantu mengatasi masalah di mana keyboard mungkin menghalangi atau mengganggu tampilan pengguna saat mengisi formulir atau input teks.
+
+#### Langkah 13 (Dispose):
+
+Pada Langkah 13, method `dispose` dipanggil ketika state dihapus dari pohon widget. Dalam kasus ini, method ini digunakan untuk membersihkan `ScrollController` yang digunakan pada Langkah 11. Ini membantu menghindari memory leak yang dapat terjadi ketika objek tidak lagi digunakan tetapi masih tetap ada di memori.
+
 # Parktikum 2
 ## Master Plan
 ![alt text](docs/img/P2.gif)
@@ -26,6 +50,20 @@
 5. Kumpulkan laporan praktikum Anda berupa link commit atau repository GitHub ke spreadsheet yang telah disediakan!
 ## Jawaban
 
+### Penjelasan InheritedWidget pada Langkah 1:
+
+`InheritedWidget` adalah salah satu konsep dasar dalam Flutter yang memungkinkan data diwariskan ke dalam subtree widget tanpa perlu menuliskan properti secara eksplisit di setiap widget. `InheritedNotifier` adalah turunan dari `InheritedWidget` yang dirancang khusus untuk bekerja dengan `Notifier` (seperti `ValueNotifier`).
+
+Pada Langkah 1, `PlanProvider` adalah sebuah `InheritedNotifier` yang digunakan untuk menyediakan objek `ValueNotifier<Plan>` ke dalam subtree widget. Ini berguna ketika Anda memiliki data yang perlu diakses atau diperbarui oleh banyak widget di dalam subtree, dan Anda ingin melakukan hal tersebut tanpa perlu menyalin properti ke setiap widget tersebut.
+
+### Maksud dari Method di Langkah 3:
+
+1. **`completedCount`**: Method ini menghitung jumlah tugas yang sudah selesai (`complete`) dalam objek `Plan`. Ini memberikan informasi tentang berapa banyak tugas yang telah diselesaikan.
+
+2. **`completenessMessage`**: Method ini menghasilkan pesan string yang menyatakan berapa banyak tugas yang telah selesai dari total tugas yang ada. Ini memberikan informasi tentang tingkat kelengkapan (completeness) dari daftar tugas.
+
+Tambahannya ini memberikan fungsionalitas tambahan pada objek `Plan` untuk memberikan informasi lebih lanjut tentang status tugas dalam daftar rencana.
+
 # Parktikum 3
 ## Master Plan
 ![alt text](docs/img/P3.gif)
@@ -38,3 +76,13 @@
 3. Lakukan capture hasil dari Langkah 14 berupa GIF, kemudian jelaskan apa yang telah Anda buat!
 4. Kumpulkan laporan praktikum Anda berupa link commit atau repository GitHub ke spreadsheet yang telah disediakan!
 ## Jawaban
+
+### Deskripsi Diagram Pohon Widget
+
+Gambar diagram tersebut menunjukkan struktur pohon widget dari aplikasi Flutter sebelum dan sesudah melakukan Navigator push. Navigator push adalah sebuah operasi yang memungkinkan kita untuk berpindah dari satu layar ke layar lainnya dalam aplikasi Flutter. Dalam diagram tersebut, kita dapat melihat bahwa:
+
+- Sebelum Navigator push, pohon widget terdiri dari `MaterialApp` di atas dan `PlanCreatorScreen` di bawah. `PlanCreatorScreen` adalah layar yang digunakan untuk membuat rencana perjalanan.
+- Sesudah Navigator push, pohon widget terdiri dari `MaterialApp` di atas dan `PlanScreen` di bawah. `PlanScreen` adalah layar yang digunakan untuk menampilkan rencana perjalanan yang telah dibuat.
+- Navigator push direpresentasikan oleh panah biru di tengah diagram. Panah biru menunjukkan bahwa ada widget baru yang ditambahkan ke pohon widget setelah Navigator push.
+
+Diagram tersebut menggunakan kode warna, dengan hijau menunjukkan widget yang tidak berubah dan biru menunjukkan widget yang baru setelah Navigator push.

@@ -8,17 +8,13 @@ class LocationScreen extends StatefulWidget {
 }
 
 class _LocationScreenState extends State<LocationScreen> {
+  Future<Position>? position;
   String myPosition = '';
+
   @override
   void initState() {
     super.initState();
-    getPosition().then((Position myPos) {
-      myPosition =
-      'Latitude: ${myPos.latitude.toString()} - Longitude: ${myPos.longitude.toString()}';
-      setState(() {
-        myPosition = myPosition;
-      });
-    });
+    position = getPosition();
   }
 
   // @override
@@ -35,9 +31,26 @@ class _LocationScreenState extends State<LocationScreen> {
     myPosition == '' ? const CircularProgressIndicator() : Text(myPosition);
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Current Location Bima')),
-      body: Center(child: myWidget),
-    );
+        appBar: AppBar(title: const Text('Current Location Bima')),
+        body: Center(
+          child: FutureBuilder(
+            future: position,
+            builder: (BuildContext context, AsyncSnapshot<Position> snapshot) {
+              if (snapshot.connectionState == ConnectionState.waiting) {
+                return const CircularProgressIndicator();
+              // } else if (snapshot.connectionState == ConnectionState.done) {
+              //   return Text(snapshot.data.toString());
+              } else if (snapshot.connectionState == ConnectionState.done) {
+                if (snapshot.hasError) {
+                  return Text('Something terrible happened!');
+                }
+                return Text(snapshot.data.toString());
+              } else {
+                return const Text('');
+              }
+            },
+          ),
+        ));
   }
 
   Future<Position> getPosition() async {

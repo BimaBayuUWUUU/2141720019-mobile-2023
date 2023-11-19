@@ -1,4 +1,6 @@
 import 'dart:async';
+import 'package:async/async.dart';
+import 'geolocation.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 import 'package:http/http.dart' as http;
@@ -18,7 +20,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: const FuturePage(),
+      // home: const FuturePage();
+      home: const LocationScreen(),
     );
   }
 }
@@ -83,6 +86,41 @@ class _FuturePageState extends State<FuturePage> {
     }
   }
 
+  void returnFG() {
+    final futures = Future.wait<int>([
+      returnOneAsync(),
+      returnTwoAsync(),
+      returnThreeAsync(),
+    ]);
+    futures.then((List<int> value) {
+      int total = 0;
+      for (int i = 0; i < value.length; i++) {
+        total += value[i];
+      }
+      setState(() {
+        result = total.toString();
+      });
+    });
+  }
+
+  Future returnError() async {
+    await Future.delayed(const Duration(seconds: 2));
+    throw Exception('Something terrible happened!');
+  }
+
+  Future handleErrors() async {
+    try {
+      await returnError();
+    } catch (error) {
+      setState(() {
+        result = error.toString();
+      });
+    }
+    finally {
+      print('Complete');
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -109,13 +147,24 @@ class _FuturePageState extends State<FuturePage> {
               //                   result = value.toString();
               //   });
               // });
-              getNumber().then((value) {
-                setState(() {
-                  result = value.toString();
-                });
-              }).catchError((e) {
-                result = 'An error occurred';
-              });
+              // getNumber().then((value) {
+              //   setState(() {
+              //     result = value.toString();
+              //   });
+              // }).catchError((e) {
+              //   result = 'An error occurred';
+              // });
+              // returnFG();
+              // returnError().then((value) {
+              //   setState(() {
+              //     result ='Success';
+              //   });
+              // }).catchError((onError) {
+              //   setState(() {
+              //     result = onError.toString();
+              //   });
+              // }).whenComplete(() => print('Complete'));
+              handleErrors();
             },
           ),
           const Spacer(),

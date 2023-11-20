@@ -32,4 +32,7 @@ class NumberStream{
   close(){
     controller.close();
   }
+  addError(){
+    controller.addError('Error');
+  }
 }

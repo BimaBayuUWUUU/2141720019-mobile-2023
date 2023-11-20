@@ -26,7 +26,7 @@ Pada kode tersebut, `Stream.periodic` digunakan untuk membuat suatu Stream yang 
 ### **Soal 6**
 
 1. Jelaskan maksud kode langkah 8 dan 10 tersebut!
-    > **Jawaban:**
+   > **Jawaban:**
 
    > Langkah 8:
    > * Menginisialisasi objek NumberStream dan StreamController.
@@ -41,3 +41,25 @@ Pada kode tersebut, `Stream.periodic` digunakan untuk membuat suatu Stream yang 
     > **Jawaban:**
     ![Soal 6](docs/img/P2S6.gif)
 3. Lalu lakukan commit dengan pesan "W13: Jawaban Soal 6".
+
+### **Soal 7**
+
+1. Jelaskan maksud kode langkah 13 sampai 15 tersebut!
+   > **Jawaban:**
+   > ```dart 
+   > addError() {
+   > controller.addError('Error');
+   > }
+   > ```
+   > Fungsi ini bertujuan untuk menambahkan kesalahan ke dalam sink suatu controller (mungkin sebuah StreamController). Metode `addError` pada objek controller dipanggil dengan parameter `Error`. Ini menandakan bahwa suatu kesalahan dengan pesan 'Error' akan ditambahkan ke dalam stream.
+   > ```dart
+   > }).onError((error) {
+   > setState(() {
+   > lastNumber = -1;
+   > });
+   > numberStream.addError();
+   > }
+   > ```
+   > Blok ini menangani kesalahan yang terjadi pada stream. Jika terjadi kesalahan dalam stream, fungsi yang diberikan kepada .`onError` akan dipanggil dengan objek kesalahan (error). Dalam kasus ini, saat terjadi kesalahan, `setState` digunakan untuk memperbarui nilai lastNumber menjadi -1, mungkin untuk memberi tahu antarmuka pengguna bahwa terjadi kesalahan. Selanjutnya, `numberStream.addError();` dipanggil, yang kemungkinan menambahkan kesalahan ke dalam stream numberStream. Namun, perlu diingat bahwa di dalam potongan kode yang diberikan, `addError` tidak menerima parameter, sehingga cara ini mungkin tidak sesuai dengan implementasi sebelumnya. Kemungkinan, seharusnya ada parameter atau nilai tertentu yang ditambahkan ke dalam stream untuk menandakan jenis kesalahan tertentu.
+2. Kembalikan kode seperti semula pada Langkah 15, comment addError() agar Anda dapat melanjutkan ke praktikum 3 berikutnya.
+3. Lalu lakukan commit dengan pesan "W13: Jawaban Soal 7".

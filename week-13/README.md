@@ -22,3 +22,22 @@ Pada kode tersebut, `Stream.periodic` digunakan untuk membuat suatu Stream yang 
    > * Tidak menunggu event atau nilai selesai sebelum melanjutkan eksekusi.
    > * Cocok digunakan ketika Anda ingin melakukan tindakan yang tidak perlu menunggu setiap event selesai sebelum melanjutkan.
 3. Lakukan commit hasil jawaban Soal 5 dengan pesan "W13: Jawaban Soal 5"
+
+### **Soal 6**
+
+1. Jelaskan maksud kode langkah 8 dan 10 tersebut!
+    > **Jawaban:**
+
+   > Langkah 8:
+   > * Menginisialisasi objek NumberStream dan StreamController.
+   > * Membuat objek Stream dari StreamController.
+   > * Menambahkan listener ke stream tersebut. Setiap kali ada data yang masuk ke dalam stream, fungsi yang diberikan kepada listen akan dipanggil. Dalam kasus ini, fungsi tersebut akan memperbarui lastNumber menggunakan setState. Ini umumnya dilakukan untuk memastikan bahwa perubahan nilai di dalam widget diperbarui dan direfleksikan pada antarmuka pengguna (UI).
+   
+   > Langkah 10:
+   > * Membuat fungsi addRandomNumber yang bertujuan untuk menambahkan angka acak ke dalam stream menggunakan objek NumberStream.
+   > * Fungsi ini menggunakan objek Random untuk menghasilkan angka acak antara 0 dan 9, dan kemudian memanggil metode addNumberToSink pada objek NumberStream untuk menambahkan angka tersebut ke dalam stream.
+
+2. Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
+    > **Jawaban:**
+    ![Soal 6](docs/img/P2S6.gif)
+3. Lalu lakukan commit dengan pesan "W13: Jawaban Soal 6".

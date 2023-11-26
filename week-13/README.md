@@ -139,3 +139,16 @@ Pada kode tersebut, `Stream.periodic` digunakan untuk membuat suatu Stream yang 
    > * Langkah 7: digunakan untuk mengimplimentasikan stream menggunakan StreamBuilder. Jika stream mendapatkan data maka akan menampilkan Text dengan nilai snapshot.data dan jika terjadi error maka akan melakukan log.
 2. Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
 3. Lalu lakukan commit dengan pesan "W13: Jawaban Soal 12".
+
+### **Soal 13**
+
+![Soal 13](docs/img/P7S13.gif)
+
+1. Jelaskan maksud praktikum ini ! Dimanakah letak konsep pola BLoC-nya ?
+   > **Jawaban:**
+   > Praktikum ini menjelaskan cara menggunakan pola BLoC pada Flutter untuk membuat aplikasi yang lebih terorganisir dan mudah dirawat. Pola BLoC memisahkan logika bisnis dari tampilan, sehingga memudahkan pengembangan dan pemeliharaan aplikasi. 
+   > Dalam praktikum ini, pola BLoC digunakan untuk menghasilkan nomor acak. Kelas RandomBloc bertanggung jawab untuk menghasilkan aliran data untuk nomor acak. Kelas RandomScreen bertanggung jawab untuk menampilkan nomor acak tersebut. 
+   > Tombol refresh pada kelas RandomScreen digunakan untuk menghasilkan nomor acak baru. Tombol ini mentrigger fungsi generateRandom() pada kelas RandomBloc. 
+   > Secara keseluruhan, praktikum ini menunjukkan cara menggunakan pola BLoC untuk membuat aplikasi Flutter yang lebih terorganisir dan mudah dirawat.
+2. Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
+3. Lalu lakukan commit dengan pesan "W13: Jawaban Soal 13".

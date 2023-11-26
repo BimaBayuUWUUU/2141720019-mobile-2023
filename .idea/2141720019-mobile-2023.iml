@@ -36,6 +36,9 @@
       <excludeFolder url="file://$MODULE_DIR$/week-11/src/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/week-11/src/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/week-11/src/build" />
+      <excludeFolder url="file://$MODULE_DIR$/week-13/src/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/week-13/src/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/week-13/src/build" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -35,6 +35,7 @@ class _StreamHomePageState extends State<StreamHomePage> {
   late NumberStream numberStream;
   late StreamController numberStreamController;
   late StreamTransformer transformer;
+  late StreamSubscription subscription;
 
   @override
   Widget build(BuildContext context) {
@@ -52,6 +53,10 @@ class _StreamHomePageState extends State<StreamHomePage> {
             ElevatedButton(
               onPressed: () => addRandomNumber(),
               child: const Text('New Random Number'),
+            ),
+            ElevatedButton(
+              onPressed: () => stopStream(),
+              child: const Text('Stop Subscription'),
             ),
           ],
       ),
@@ -89,29 +94,57 @@ class _StreamHomePageState extends State<StreamHomePage> {
     numberStream = NumberStream();
     numberStreamController = numberStream.controller;
     Stream stream = numberStreamController.stream;
-    stream.transform(transformer).listen((event) {
+    // stream.transform(transformer).listen((event) {
+    //   setState(() {
+    //     lastNumber = event;
+    //   });
+    // }).onError((error){
+    //   setState(() {
+    //     lastNumber = -1;
+    //   });
+    // });
+    subscription = stream.listen((event) {
       setState(() {
         lastNumber = event;
       });
-    }).onError((error){
+    });
+    super.initState();
+
+    subscription.onError((error){
       setState(() {
         lastNumber = -1;
       });
     });
-    super.initState();
+
+    subscription.onDone(() {
+      print('OnDone was called');
+    });
+
+  }
+
+  void stopStream() {
+    numberStreamController.close();
   }
 
   @override
   void dispose() {
-    numberStreamController.close();
-    super.dispose();
+    // numberStreamController.close();
+    // super.dispose();
+    subscription.cancel();
   }
 
   void addRandomNumber() {
     Random random = Random();
     int myNum = random.nextInt(10);
-    numberStream.addNumberToSink(myNum);
-    // numberStream.addError();
+    if(!numberStreamController.isClosed){
+      numberStreamController.sink.add(myNum);
+    }else{
+      setState(() {
+        lastNumber = -1;
+      });
+    }
+    // numberStream.addNumberToSink(myNum);
+    // // numberStream.addError();
   }
 
 }

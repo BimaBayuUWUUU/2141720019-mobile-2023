@@ -66,10 +66,29 @@ Pada kode tersebut, `Stream.periodic` digunakan untuk membuat suatu Stream yang 
 
 ### **Soal 8**
 
-![Soal 6](docs/img/P3S8.gif)
+![Soal 8](docs/img/P3S8.gif)
 
 1. Jelaskan maksud kode langkah 1-3 tersebut!
    > **Jawaban:**
    > Kode ini mengimplementasikan transformasi stream pada aplikasi Flutter. Ini menggunakan StreamTransformer untuk mengalikan nilai integer dalam stream dengan 10. Hasil transformasi dan penanganan kesalahan diterapkan, dan hasilnya diperbarui dalam state lastNumber untuk pembaruan antarmuka pengguna.
 2. Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
 3. Lalu lakukan commit dengan pesan "W13: Jawaban Soal 8".
+
+### **Soal 9**
+
+![Soal 9](docs/img/P4S9.gif)
+
+1. Jelaskan maksud kode langkah 2, 6 dan 8 tersebut!
+   > **Jawaban:**
+   > * Langkah 2: 
+     >   * Membuat subscription untuk memantau perubahan pada suatu stream. 
+     >   * Ketika ada perubahan, nilai stream digunakan untuk memperbarui state lastNumber dan kemungkinan memperbarui antarmuka pengguna.
+   > * Langkah 6:
+     >   * Membatalkan pemantauan terhadap stream jika tidak lagi diperlukan.
+   > * Langkah 8:
+     >   * Menggunakan StreamController untuk mengirim data acak ke dalam stream.
+     >   * Menangani situasi di mana stream sudah ditutup dengan mengubah state lastNumber menjadi -1.
+2. Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
+3. Lalu lakukan commit dengan pesan "W13: Jawaban Soal 9".
+
+### **Soal 10**

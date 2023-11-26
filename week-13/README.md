@@ -92,3 +92,19 @@ Pada kode tersebut, `Stream.periodic` digunakan untuk membuat suatu Stream yang 
 3. Lalu lakukan commit dengan pesan "W13: Jawaban Soal 9".
 
 ### **Soal 10**
+
+![Soal 10](docs/img/P5S10.png)
+
+1. Jelaskan mengapa error itu bisa terjadi ?
+   > **Jawaban:**
+   > Karena pada kode tersebut, stream sudah ditutup sebelum data dapat dikirimkan ke dalam stream. Hal ini menyebabkan terjadinya error.
+
+### **Soal 11**
+
+![Soal 11](docs/img/P5S11.gif)
+
+1. Jelaskan mengapa hal itu bisa terjadi ?
+    > **Jawaban:**
+    > 
+2. Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
+3. Lalu lakukan commit dengan pesan "W13: Jawaban Soal 10,11".

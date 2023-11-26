@@ -1,3 +1,16 @@
+### **Soal 1**
+
+![Soal 1](docs/img/P1S1.png)
+
+1. Tambahkan nama panggilan Anda pada title app sebagai identitas hasil pekerjaan Anda.
+2. Gantilah warna tema aplikasi sesuai kesukaan Anda.
+3. Lakukan commit hasil jawaban Soal 1 dengan pesan "W13: Jawaban Soal 1"
+
+## **Soal 2**
+
+1. Tambahkan 5 warna lainnya sesuai keinginan Anda pada variabel colors tersebut.
+2. Lakukan commit hasil jawaban Soal 2 dengan pesan "W13: Jawaban Soal 2"
+
 ### **Soal 3**
 1. Jelaskan fungsi keyword yield* pada kode tersebut!
     > **Jawaban:**
@@ -6,6 +19,13 @@ Keyword `yield` pada kode tersebut digunakan untuk menyebarkan nilai-nilai dari 
     > **Jawaban:**
 Pada kode tersebut, `Stream.periodic` digunakan untuk membuat suatu Stream yang menghasilkan nilai setiap detik. Fungsi yang diberikan sebagai parameter kedua akan dipanggil setiap kali nilai baru dihasilkan oleh Stream.periodic. Di dalam fungsi tersebut, indeks warna dihitung berdasarkan waktu t dan diambil modulus terhadap panjang array warna (colors). Nilai yang dihasilkan oleh Stream.periodic adalah nilai-nilai indeks tersebut.
 3. Lakukan commit hasil jawaban Soal 3 dengan pesan "W13: Jawaban Soal 3"
+
+### **Soal 4**
+
+![Soal 6](docs/img/P1S4.gif)
+
+1. Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
+2. Lakukan commit hasil jawaban Soal 4 dengan pesan "W13: Jawaban Soal 4"
 
 ### **Soal 5**
 1. Jelaskan perbedaan menggunakan listen dan await for (langkah 9) !
@@ -108,3 +128,14 @@ Pada kode tersebut, `Stream.periodic` digunakan untuk membuat suatu Stream yang 
     > 
 2. Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
 3. Lalu lakukan commit dengan pesan "W13: Jawaban Soal 10,11".
+
+### **Soal 12**
+
+![Soal 12](docs/img/P6S12.gif)
+
+1. Jelaskan maksud kode pada langkah 3 dan 7 !
+   > **Jawaban:**
+   > * Langkah 3: digunakan untuk membuat stream yang mengenerate random number. 
+   > * Langkah 7: digunakan untuk mengimplimentasikan stream menggunakan StreamBuilder. Jika stream mendapatkan data maka akan menampilkan Text dengan nilai snapshot.data dan jika terjadi error maka akan melakukan log.
+2. Capture hasil praktikum Anda berupa GIF dan lampirkan di README.
+3. Lalu lakukan commit dengan pesan "W13: Jawaban Soal 12".
